@@ -51,4 +51,9 @@ class User extends Authenticatable
             get: fn ($value) =>  ["student", "lecturer", "admin"][$value],
         );
     }
+
+    public function courses()
+    {
+        return $this->hasMany(Course::class);
+    }
 }
