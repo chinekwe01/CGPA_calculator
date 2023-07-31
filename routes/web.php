@@ -31,6 +31,8 @@ All Normal Users Routes List
 Route::middleware(['auth', 'user-access:student'])->group(function () {
     Route::get('student/home', [HomeController::class, 'studentHome'])->name('student.home');
     Route::get('/student/courses', [CourseController::class, 'index'])->name('student.courses');
+    Route::get('/student/courses/create', [CourseController::class, 'create'])->name('student.course.create');
+    Route::post('/student/courses/create', [CourseController::class, 'store'])->name('student.course.store');
 });
 
 /*------------------------------------------

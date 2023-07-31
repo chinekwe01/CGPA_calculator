@@ -25,7 +25,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-
+        return view('courses.create');
     }
 
     /**
@@ -36,7 +36,30 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'session_date' => 'required',
+            'matno' => 'required|max:11',
+            'diploma' => 'required',
+            'address' => 'required',
+            'course_registered_for' => 'required',
+            'course_code' => 'required',
+            'course_title' => 'required',
+            'credit_unit' => 'required',
+        ]);
+
+        $course = Course::create([
+            'session_date' => $request->session_date,
+            'matno' => $request->matno,
+            'diploma' => $request->diploma,
+            'address' => $request->address,
+            'course_registered_for' => $request->course_registered_for,
+            'course_code' => $request->course_code,
+            'course_title' => $request->course_title,
+            'credit_unit' => $request->credit_unit,
+        ]);
+        // CourtCase::create($request->all());
+
+        return redirect()->route('student.courses')->with('success','Course created successfully.');
     }
 
     /**
