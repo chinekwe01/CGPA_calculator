@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CourseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ All Normal Users Routes List
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:student'])->group(function () {
     Route::get('student/home', [HomeController::class, 'studentHome'])->name('student.home');
+    Route::get('/student/courses', [CourseController::class, 'index'])->name('student.courses');
 });
 
 /*------------------------------------------

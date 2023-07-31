@@ -19,13 +19,12 @@ return new class extends Migration
             $table->string('matno');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-
             $table->string('diploma');
             $table->string('address');
-            $table->string('course registered for');
-            $table->string('course code');
-            $table->string('course title');
-            $table->float('credit unit');
+            $table->string('course_registered_for');
+            $table->string('course_code');
+            $table->string('course_title');
+            $table->float('credit_unit');
             $table->timestamps();
         });
     }

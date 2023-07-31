@@ -22,10 +22,10 @@ class CreateCourseSeeder extends Seeder
                'user_id'=>'1',
                'diploma'=>'National Diploma',
                'address'=>'No 5 Koghan street',
-               'course registered for'=>'First Semester',
-               'course code'=>'COM311',
-               'course title'=>'Operating System',
-               'credit unit'=>'3'
+               'course_registered_for'=>'First Semester',
+               'course_code'=>'COM311',
+               'course_title'=>'Operating System',
+               'credit_unit'=>'3'
             ],
             [
                 'session_date'=>'2022',
@@ -33,10 +33,10 @@ class CreateCourseSeeder extends Seeder
                 'user_id'=>'1',
                 'diploma'=>'National Diploma',
                 'address'=>'No 5 Koghan street',
-                'course registered for'=>'First Semester',
-                'course code'=>'COM312',
-                'course title'=>'Database Design 1',
-                'credit unit'=>'3'
+                'course_registered_for'=>'First Semester',
+                'course_code'=>'COM312',
+                'course_title'=>'Database Design 1',
+                'credit_unit'=>'3'
              ],
         ];
 
